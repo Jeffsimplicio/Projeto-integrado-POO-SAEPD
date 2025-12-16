@@ -1,0 +1,47 @@
+[
+    {
+        "matricula": "20251234",
+        "nome": "robinho",
+        "reponsavel": [
+            "julia"
+        ],
+        "nascimento": "12/08/2007",
+        "turma": "informatica"
+    },
+    {
+        "matricula": "87456321",
+        "nome": "bruninha",
+        "reponsavel": [
+            "julia"
+        ],
+        "nascimento": "12/08/2007",
+        "turma": "informatica"
+    },
+    {
+        "matricula": "12345678",
+        "nome": "francisquinha",
+        "reponsavel": [
+            "julia"
+        ],
+        "nascimento": "12/08/2007",
+        "turma": "agronomia"
+    },
+    {
+        "matricula": "748159263",
+        "nome": "mateuzin do grau",
+        "reponsavel": [
+            "mariazinha"
+        ],
+        "nascimento": "12/08/2007",
+        "turma": "agronomia"
+    },
+    {
+        "matricula": "147258369",
+        "nome": "biazinha",
+        "reponsavel": [
+            "julia"
+        ],
+        "nascimento": "12/08/2007",
+        "turma": "informatica"
+    }
+]

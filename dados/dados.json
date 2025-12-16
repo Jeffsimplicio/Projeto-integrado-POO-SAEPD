@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "user": "marcos",
+        "password": "marcos",
+        "tel": "912345678",
+        "email": "marcos@gmail.com",
+        "diciplina": [
+            "matematica"
+        ],
+        "funcao": "professor"
+    },
+    {
+        "id": 2,
+        "user": "antonia",
+        "password": "antonia123",
+        "tel": "912345678",
+        "email": "antonia@gmail.com",
+        "diciplina": [
+            "filosofia"
+        ],
+        "funcao": "professor"
+    },
+    {
+        "id": 3,
+        "user": "admin",
+        "password": "admin",
+        "tel": "912345678",
+        "email": "admin@gmail.com",
+        "funcao": "admin"
+    },
+    {
+        "id": 4,
+        "user": "maria",
+        "password": "maria123",
+        "tel": "985236471",
+        "email": "maria@gmail.com",
+        "diciplina": [
+            "veterinaria de pequeno porte"
+        ],
+        "funcao": "professor"
+    },
+    {
+        "id": 5,
+        "user": "julia",
+        "password": "julia123",
+        "telefone": [
+            "988888888"
+        ],
+        "email": "julia@gmail.com",
+        "funcao": "responsavel"
+    },
+    {
+        "id": 6,
+        "user": "mariazinha",
+        "password": "mariazinha123",
+        "telefone": [
+            "924681357"
+        ],
+        "email": "mariazinha@gmail.com",
+        "funcao": "responsavel"
+    }
+]

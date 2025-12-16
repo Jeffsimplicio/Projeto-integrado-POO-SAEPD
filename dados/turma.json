@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nome_turma": "informatica",
+        "turno": "manha",
+        "professor": "maria"
+    },
+    {
+        "id": 2,
+        "nome_turma": "agronomia",
+        "turno": "matutino",
+        "professor": "antonia"
+    }
+]
