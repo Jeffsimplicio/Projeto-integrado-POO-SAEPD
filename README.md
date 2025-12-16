@@ -34,7 +34,7 @@ O trabalho foi dividido em três grandes módulos. **A responsabilidade é defin
 | **Ilma Rodrigues V. A. **Estrutura Base / Documentação** | `README.md`, criação das Classe Abstrata , Estrutura Inicial |
 | **Francisco Jeferson Simplicio de Sousa**  | **Módulo de Comunicação** | `Mensagem`, `justificativa`, Repositório e Serviço de Mensagens | 
 | **Gyan Carlos Mateus de Oliveira**  | **Módulo de Perfis** | Implementação da classe `Professor`, `Responsavel` e Repositório de Perfis | 
-| **Erislanio Jaco da Silva**  | **Módulo de Perfis** | Implementação da classe `aluno`,`Perfil_responsavel` e Serviço de Autenticação (classes de Validação) | 
+| **Erislanio Jaco da Silva**  | **Módulo de Perfis** | Implementação da classe `aluno`,`Perfil_professor` e Serviço de Autenticação (classes de Validação) | 
 | **Francisco Jeferson Simplicio de Sousa**  | **Módulo Acadêmico** | Classes `Turma`, `Nota`, `Frequencia` e seus Repositórios | Pendente |
 | **Jose Nataniel Gomes Pereira**  | **Módulo Acadêmico / Principal** | Classes `login`, `Administrador` (Lógica de Execução) | 
 
