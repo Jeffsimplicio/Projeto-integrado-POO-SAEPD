@@ -1,4 +1,4 @@
-import json  # Importa a biblioteca padrão JSON, utilizada para manipulação de dados estruturados em formato texto (JavaScript Object Notation).
+import json  # Importa a biblioteca padrão JSON, utilizada para manipulação de dados estruturados em formato texto.
 
 from Administrador import iniciar_cadastro  # Importa a função iniciar_cadastro do módulo Administrador, responsável por inicializar processos específicos do perfil administrativo.
 from Perfil_professor import iniciar_perfil_professor  # Importa a função iniciar_perfil_professor do módulo Perfil_professor, destinada a iniciar funcionalidades específicas do perfil docente.
