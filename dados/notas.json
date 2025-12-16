@@ -1,0 +1,42 @@
+[
+    {
+        "nome_aluno": {
+            "matricula": "20251234",
+            "nome": "robinho",
+            "reponsavel": [
+                "julia"
+            ],
+            "nascimento": "12/08/2007",
+            "turma": "informatica"
+        },
+        "professor": "marcos",
+        "1bim": {
+            "nota_comp": 8.0,
+            "nota_extra": 6.0,
+            "nota_trab": 9.0,
+            "nota_prova": 9.0,
+            "nota_final": 8.0,
+            "observacao": "ta danado o robinho"
+        }
+    },
+    {
+        "nome_aluno": {
+            "matricula": "12345678",
+            "nome": "francisquinha",
+            "reponsavel": [
+                "julia"
+            ],
+            "nascimento": "12/08/2007",
+            "turma": "agronomia"
+        },
+        "professor": "marcos",
+        "1bim": {
+            "nota_comp": 10.0,
+            "nota_extra": 8.0,
+            "nota_trab": 5.0,
+            "nota_prova": 9.0,
+            "nota_final": 8.0,
+            "observacao": "ta fuleira"
+        }
+    }
+]

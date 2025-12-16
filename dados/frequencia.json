@@ -1,0 +1,67 @@
+[
+    {
+        "matricula": "20251234",
+        "historico": [
+            {
+                "data": "15/12/2025 15:51",
+                "status": "Presente"
+            },
+            {
+                "data": "15/12/2025 15:52",
+                "status": "Faltou"
+            }
+        ]
+    },
+    {
+        "matricula": "87456321",
+        "historico": [
+            {
+                "data": "15/12/2025 15:51",
+                "status": "Faltou"
+            },
+            {
+                "data": "15/12/2025 15:52",
+                "status": "Presente"
+            }
+        ]
+    },
+    {
+        "matricula": "147258369",
+        "historico": [
+            {
+                "data": "15/12/2025 15:51",
+                "status": "Presente"
+            },
+            {
+                "data": "15/12/2025 15:52",
+                "status": "Presente"
+            }
+        ]
+    },
+    {
+        "matricula": "12345678",
+        "historico": [
+            {
+                "data": "15/12/2025 20:19",
+                "status": "Presente"
+            },
+            {
+                "data": "15/12/2025 20:21",
+                "status": "Faltou"
+            }
+        ]
+    },
+    {
+        "matricula": "748159263",
+        "historico": [
+            {
+                "data": "15/12/2025 20:19",
+                "status": "Faltou"
+            },
+            {
+                "data": "15/12/2025 20:21",
+                "status": "Faltou"
+            }
+        ]
+    }
+]
