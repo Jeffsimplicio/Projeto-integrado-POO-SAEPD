@@ -1,11 +1,11 @@
-from Professor import cad_professor
-from Turma import cad_turma
-from Responsavel import cad_responsavel
+from Professor import cad_professor  # Importa a função cad_professor do módulo Professor, responsável por cadastrar novos docentes no sistema.
+from Turma import cad_turma          # Importa a função cad_turma do módulo Turma, utilizada para registrar novas turmas acadêmicas.
+from Responsavel import cad_responsavel  # Importa a função cad_responsavel do módulo Responsavel, destinada ao cadastro de responsáveis pelos alunos.
 
-def iniciar_cadastro( nome_usuario):
-    print(nome_usuario)
-    while True:
-        opcao = int(input("""
+def iniciar_cadastro(nome_usuario):  # Define a função iniciar_cadastro, que recebe como parâmetro o nome do usuário autenticado.
+    print(nome_usuario)  # Exibe o nome do usuário atual, reforçando a identificação de quem está realizando o cadastro.
+    while True:  # Estrutura de repetição infinita, garantindo que o menu seja exibido continuamente até que o usuário opte por sair.
+        opcao = int(input("""  # Solicita ao usuário a escolha de uma opção numérica, convertendo a entrada para inteiro.
 O que deseja fazer?
 1 -> CADASTRAR PROFESSOR
 2 -> CADASTRAR ALUNOS
@@ -14,17 +14,16 @@ O que deseja fazer?
 5 -> Exit
     """))
         
-        if opcao == 1:
-            print("\n")
-            cad_professor()
-        elif opcao == 3:
-            print("\n")
-            cad_turma()
-        elif opcao == 4:
-            print("\n")
-            cad_responsavel()
-        elif opcao == 5:
-            break
-        elif opcao not in [1, 2, 3, 4, 5]:
-            print("Opção inválida. Escolha de 1 a 5.")
-        
+        if opcao == 1:  # Caso a opção escolhida seja 1, inicia o processo de cadastro de professor.
+            print("\n")  # Imprime uma quebra de linha para melhor formatação visual.
+            cad_professor()  # Chama a função cad_professor para executar o cadastro de docentes.
+        elif opcao == 3:  # Caso a opção escolhida seja 3, inicia o processo de cadastro de turma.
+            print("\n")  # Imprime uma quebra de linha para separar visualmente as ações.
+            cad_turma()  # Chama a função cad_turma para executar o cadastro de turmas.
+        elif opcao == 4:  # Caso a opção escolhida seja 4, inicia o processo de cadastro de responsável.
+            print("\n")  # Imprime uma quebra de linha para clareza na saída.
+            cad_responsavel()  # Chama a função cad_responsavel para executar o cadastro de responsáveis.
+        elif opcao == 5:  # Caso a opção escolhida seja 5, encerra o loop e finaliza o menu de cadastro.
+            break  # Interrompe a execução do laço while, encerrando a função.
+        elif opcao not in [1, 2, 3, 4, 5]:  # Caso o usuário insira um valor fora das opções válidas.
+            print("Opção inválida. Escolha de 1 a 5.")  # Exibe mensagem de erro orientando a escolha correta.
