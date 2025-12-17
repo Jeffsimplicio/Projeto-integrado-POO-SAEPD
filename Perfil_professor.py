@@ -14,9 +14,7 @@ lista_filtro_aluno = []
 
 # Função que filtra os alunos pertencentes a uma turma específica
 def filtrar_aluno(turma):
-
     global lista_filtro_aluno
-
     # Limpa a lista antes de adicionar novos dados
     lista_filtro_aluno.clear()
 
@@ -34,9 +32,8 @@ def filtrar_aluno(turma):
     for item in lista_filtro_aluno:
         print(f"matricula = {item['matricula']} --- {item['nome']}")
 
+
 lista_turma = []
-
-
 # Função responsável por listar todas as turmas cadastradas no sistema
 def listar_turma():
     global lista_turma

@@ -90,7 +90,7 @@ class Aluno:
                         break
 
                 # Armazena os responsáveis dos alunos
-                self.dic_add_dados['reponsavel'] = self.lista_responsavel
+                self.dic_add_dados['responsavel'] = self.lista_responsavel
                 self.dic_add_dados['nascimento'] = data_nascimento
                 self.dic_add_dados['turma'] = turma_aluno
 
@@ -233,6 +233,3 @@ def cad_aluno():
         if opcao != 1:
             break
 
-
-# Chamada inicial da função de cadastro de alunos
-cad_aluno()

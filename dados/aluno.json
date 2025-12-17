@@ -2,7 +2,7 @@
     {
         "matricula": "20251234",
         "nome": "robinho",
-        "reponsavel": [
+        "responsavel": [
             "julia"
         ],
         "nascimento": "12/08/2007",
@@ -11,7 +11,7 @@
     {
         "matricula": "87456321",
         "nome": "bruninha",
-        "reponsavel": [
+        "responsavel": [
             "julia"
         ],
         "nascimento": "12/08/2007",
@@ -20,7 +20,7 @@
     {
         "matricula": "12345678",
         "nome": "francisquinha",
-        "reponsavel": [
+        "responsavel": [
             "julia"
         ],
         "nascimento": "12/08/2007",
@@ -29,7 +29,7 @@
     {
         "matricula": "748159263",
         "nome": "mateuzin do grau",
-        "reponsavel": [
+        "responsavel": [
             "mariazinha"
         ],
         "nascimento": "12/08/2007",
@@ -38,10 +38,19 @@
     {
         "matricula": "147258369",
         "nome": "biazinha",
-        "reponsavel": [
+        "responsavel": [
             "julia"
         ],
         "nascimento": "12/08/2007",
         "turma": "informatica"
+    },
+    {
+        "matricula": "14725836",
+        "nome": "joaozin",
+        "responsavel": [
+            "mariazinha"
+        ],
+        "nascimento": "08/12/2020",
+        "turma": "agronomia"
     }
 ]

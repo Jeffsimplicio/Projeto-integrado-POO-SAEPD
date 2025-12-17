@@ -59,5 +59,27 @@
         ],
         "email": "mariazinha@gmail.com",
         "funcao": "responsavel"
+    },
+    {
+        "id": 7,
+        "user": "matilda",
+        "password": "matilda123",
+        "tel": "922223333",
+        "email": "matilda@gmail.com",
+        "diciplina": [
+            "religiao",
+            "ciencias"
+        ],
+        "funcao": "professor"
+    },
+    {
+        "id": 8,
+        "user": "socorro",
+        "password": "socorro123",
+        "telefone": [
+            "987654321"
+        ],
+        "email": "socorro@gmail.com",
+        "funcao": "responsavel"
     }
 ]
