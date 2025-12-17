@@ -2,6 +2,7 @@ import json  # Importa a biblioteca padrão JSON, utilizada para manipulação d
 
 from Administrador import iniciar_cadastro  # Importa a função iniciar_cadastro do módulo Administrador, responsável por inicializar processos específicos do perfil administrativo.
 from Perfil_professor import iniciar_perfil_professor  # Importa a função iniciar_perfil_professor do módulo Perfil_professor, destinada a iniciar funcionalidades específicas do perfil docente.
+from Perfil_responsavel import iniciar_perfil_responsavel
 
 arquivo_dados = 'dados/dados.json'  # Define o caminho do arquivo JSON que contém os dados de usuários e suas credenciais.
 nome_usuario = 0  # Inicializa a variável nome_usuario com valor numérico, embora semanticamente deveria ser uma string (ponto de atenção).
@@ -23,10 +24,17 @@ class Login:  # Declaração da classe Login, que encapsula a lógica de autenti
                             nome_usuario = lista_dados[i]['user']  # Armazena o nome do usuário autenticado (atenção: variável local, não global).
                             iniciar_cadastro(nome_usuario)  # Chama a função iniciar_cadastro para habilitar funcionalidades administrativas.
                             return  # Encerra o método após autenticação bem-sucedida.
+                       
                         if lista_dados[i]['funcao'] == 'professor':  # Caso a função seja "professor", direciona para o fluxo docente.
                             print("login feituado com sucesso")  # Mensagem de confirmação de login.
                             nome_usuario = lista_dados[i]['user']  # Armazena o nome do usuário autenticado.
                             iniciar_perfil_professor(nome_usuario)  # Chama a função iniciar_perfil_professor para habilitar funcionalidades docentes.
+                            return  # Encerra o método após autenticação bem-sucedida.
+                        
+                        if lista_dados[i]['funcao'] == 'responsavel':  # Caso a função seja "professor", direciona para o fluxo docente.
+                            print("login feituado com sucesso")  # Mensagem de confirmação de login.
+                            nome_usuario = lista_dados[i]['user']  # Armazena o nome do usuário autenticado.
+                            iniciar_perfil_responsavel(nome_usuario)  # Chama a função iniciar_perfil_professor para habilitar funcionalidades docentes.
                             return  # Encerra o método após autenticação bem-sucedida.
             
             print("usuario nao encontrado")  # Caso nenhum usuário corresponda às credenciais fornecidas, informa falha na autenticação.

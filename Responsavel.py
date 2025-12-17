@@ -55,7 +55,7 @@ class Responsavel:
                             break
                     self.dic_add_dados['telefone'] = self.lista_telefone
                     self.dic_add_dados['email'] = email_valido
-                    self.dic_add_dados['funcao'] = "reponsavel"
+                    self.dic_add_dados['funcao'] = "responsavel"
 
                     self.lista_clone_dados = []
                     if os.path.exists(dados_json):

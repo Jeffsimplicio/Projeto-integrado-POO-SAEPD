@@ -1,12 +1,13 @@
 from Professor import cad_professor  # Importa a função cad_professor do módulo Professor, responsável por cadastrar novos docentes no sistema.
 from Turma import cad_turma          # Importa a função cad_turma do módulo Turma, utilizada para registrar novas turmas acadêmicas.
 from Responsavel import cad_responsavel  # Importa a função cad_responsavel do módulo Responsavel, destinada ao cadastro de responsáveis pelos alunos.
+from Aluno import cad_aluno
 
 def iniciar_cadastro(nome_usuario):  # Define a função iniciar_cadastro, que recebe como parâmetro o nome do usuário autenticado.
-    print(nome_usuario)  # Exibe o nome do usuário atual, reforçando a identificação de quem está realizando o cadastro.
+    
     while True:  # Estrutura de repetição infinita, garantindo que o menu seja exibido continuamente até que o usuário opte por sair.
-        opcao = int(input("""  # Solicita ao usuário a escolha de uma opção numérica, convertendo a entrada para inteiro.
-O que deseja fazer?
+        print(f"que deseja fazer? {nome_usuario}")
+        opcao = int(input(f""" 
 1 -> CADASTRAR PROFESSOR
 2 -> CADASTRAR ALUNOS
 3 -> CADASTRAR TURMA
@@ -17,6 +18,9 @@ O que deseja fazer?
         if opcao == 1:  # Caso a opção escolhida seja 1, inicia o processo de cadastro de professor.
             print("\n")  # Imprime uma quebra de linha para melhor formatação visual.
             cad_professor()  # Chama a função cad_professor para executar o cadastro de docentes.
+        if opcao == 2:  # Caso a opção escolhida seja 2, inicia o processo de cadastro de professor.
+            print("\n")  # Imprime uma quebra de linha para melhor formatação visual.
+            cad_aluno()  # Chama a função cad_aluno para executar o cadastro de docentes.
         elif opcao == 3:  # Caso a opção escolhida seja 3, inicia o processo de cadastro de turma.
             print("\n")  # Imprime uma quebra de linha para separar visualmente as ações.
             cad_turma()  # Chama a função cad_turma para executar o cadastro de turmas.

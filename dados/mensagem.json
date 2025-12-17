@@ -1,0 +1,19 @@
+[
+    {
+        "nome_aluno": "biazinha",
+        "conversar": [
+            {
+                "remetente": "julia",
+                "destinatario": "matilda",
+                "mensagem": "Bom dia, ela vai faltar hoje",
+                "data": "16/12/2025 21:00"
+            },
+            {
+                "remetente": "julia",
+                "destinatario": "matilda",
+                "mensagem": "Bom dia, ela ja esta melhor",
+                "data": "16/12/2025 21:03"
+            }
+        ]
+    }
+]
