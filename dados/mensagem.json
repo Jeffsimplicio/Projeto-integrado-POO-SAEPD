@@ -13,6 +13,29 @@
                 "destinatario": "matilda",
                 "mensagem": "Bom dia, ela ja esta melhor",
                 "data": "16/12/2025 21:03"
+            },
+            {
+                "remetente": "matilda",
+                "destinatario": "julia",
+                "mensagem": "olha Julia, a biazinha esta de advertencia",
+                "data": "17/12/2025 13:30"
+            },
+            {
+                "remetente": "matilda",
+                "destinatario": "socorro",
+                "mensagem": "Bom dia socorro, porfavor comparecer amanha",
+                "data": "17/12/2025 13:31"
+            }
+        ]
+    },
+    {
+        "nome_aluno": "joaozin",
+        "conversar": [
+            {
+                "remetente": "mariazinha",
+                "destinatario": "maria",
+                "mensagem": "Bom dia professora maria",
+                "data": "17/12/2025 12:11"
             }
         ]
     }

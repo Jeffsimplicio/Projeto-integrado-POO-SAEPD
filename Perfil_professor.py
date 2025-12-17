@@ -1,8 +1,7 @@
 import json # Importa o módulo json
-
 from Frequencia import iniciar_frequencia # Importa a função 
-
-from Nota import registrar_nota # Importa a função responsável pelo registro de notas dos alunos
+from lancarNota import registrar_nota # Importa a função responsável pelo registro de notas dos alunos
+from Mensagem import iniciar_conversar
 
 arquivo_turma_json = "dados/turma.json" # Define o caminho do arquivo JSON que armazena os dados das turmas
 
@@ -70,6 +69,7 @@ def iniciar_perfil_professor(nome_usuario):
 
         # Filtra e exibe os alunos da turma selecionada
         filtrar_aluno(turma)
+        escolha_aluno = str(input("qual aluno: "))
 
         # Exibe o menu de opções disponíveis ao professor
         opcao = int(input("""
@@ -88,7 +88,10 @@ Selecione a opção desejada:
         if opcao == 2:
             print("\n")
             registrar_nota(nome_usuario, turma, lista_filtro_aluno)
-
+        if opcao == 3:
+            print("\n")
+            
+            iniciar_conversar(escolha_aluno, nome_usuario)
         if opcao == 5:
 
             break
