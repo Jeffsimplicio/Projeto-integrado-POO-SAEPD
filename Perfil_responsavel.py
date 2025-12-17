@@ -26,14 +26,59 @@ def buscar_alunos_por_responsavel( nome_responsavel_busca):
         print(f"matricula = {item['matricula']} --- {item['nome']}")
         
 
+class ConsultaNotas:
+    def __init__(self, caminho_arquivo):
+        self.caminho_arquivo = caminho_arquivo
+        self.dados = self._carregar_dados()
 
+    def _carregar_dados(self):
+        """Lê o arquivo JSON com as notas."""
+        if os.path.exists(self.caminho_arquivo):
+            try:
+                with open(self.caminho_arquivo, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except json.JSONDecodeError:
+                print("Erro ao ler o arquivo de notas.")
+                return []
+        return []
 
+    def buscar_notas_por_aluno(self, escolha_aluno):
+        """Busca e exibe as notas de um aluno específico."""
+        aluno_encontrado = False
+        escolha_aluno = escolha_aluno.strip().lower()
 
+        for registro in self.dados:
+            # Acessa o nome dentro do dicionário nome_aluno
+            dados_aluno = registro.get("nome_aluno", {})
+            nome_aluno = dados_aluno.get("nome", "").lower()
+
+            if nome_aluno == escolha_aluno:
+                aluno_encontrado = True
+                notas_1bim = registro.get("1bim", {})
+                
+                print("-" * 30)
+                print(f"ALUNO: {dados_aluno.get('nome').upper()}")
+                print(f"TURMA: {dados_aluno.get('turma')}")
+                print(f"PROFESSOR: {registro.get('professor')}")
+                print("-" * 30)
+                print(f"Nota Prova: {notas_1bim.get('nota_prova')}")
+                print(f"Nota Trabalho: {notas_1bim.get('nota_trab')}")
+                print(f"Nota Final: {notas_1bim.get('nota_final')}")
+                print(f"Observação: {notas_1bim.get('observacao')}")
+                print("-" * 30)
+
+        if not aluno_encontrado:
+            print(f"Aluno '{escolha_aluno}' não encontrado.")
 # --- Bloco de Execução Principal ---
 
 def iniciar_perfil_responsavel(nome_usuario):
 
     while True:
+        buscar_alunos_por_responsavel(nome_usuario)
+        print("\n")
+        escolha_aluno = str(input("qual aluno: "))
+        print("\n")
+        
         opcao = int(input("""
 Selecione a opção desejada:
 1 → Ver notas
@@ -41,12 +86,12 @@ Selecione a opção desejada:
 3 → Enviar justificativas
 4 → Encerrar sessão
     """))
-        buscar_alunos_por_responsavel(nome_usuario)
-        print("\n")
-        escolha_aluno = str(input("qual aluno: "))
-        print("\n")
         
-        if opcao ==2:
+        if opcao == 1:
+            consulta_notas = ConsultaNotas('dados/notas.json')
+            consulta_notas.buscar_notas_por_aluno(escolha_aluno)
+
+        if opcao == 2:
             iniciar_conversar(escolha_aluno, nome_usuario)
         
         if opcao == 4:

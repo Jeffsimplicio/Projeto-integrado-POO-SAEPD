@@ -10,7 +10,6 @@ arquivo_aluno_json = "dados/aluno.json"
 # Lista global utilizada para armazenar os alunos
 lista_filtro_aluno = []
 
-
 # Função que filtra os alunos pertencentes a uma turma específica
 def filtrar_aluno(turma):
     global lista_filtro_aluno
