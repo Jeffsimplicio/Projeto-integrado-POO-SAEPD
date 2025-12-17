@@ -34,10 +34,6 @@ def buscar_alunos_por_responsavel( nome_responsavel_busca):
 def iniciar_perfil_responsavel(nome_usuario):
 
     while True:
-        buscar_alunos_por_responsavel(nome_usuario)
-        print("\n")
-        escolha_aluno = str(input("qual aluno: "))
-        print("\n")
         opcao = int(input("""
 Selecione a opção desejada:
 1 → Ver notas
@@ -45,6 +41,11 @@ Selecione a opção desejada:
 3 → Enviar justificativas
 4 → Encerrar sessão
     """))
+        buscar_alunos_por_responsavel(nome_usuario)
+        print("\n")
+        escolha_aluno = str(input("qual aluno: "))
+        print("\n")
+        
         if opcao ==2:
             iniciar_conversar(escolha_aluno, nome_usuario)
         

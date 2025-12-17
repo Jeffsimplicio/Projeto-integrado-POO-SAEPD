@@ -59,6 +59,36 @@ class Mensagem:
         with open(historico_mensagens, 'w', encoding='utf-8') as arquivo_json:
             json.dump(lista_historico_mensagem, arquivo_json, indent=4, ensure_ascii=False)
         return True
+    
+
+class GerenciadorMensagens:
+    def __init__(self, dados_carregados):
+        
+        self.dados = dados_carregados
+
+    def buscar_por_pessoa(self, nome_remetente):
+        
+        resultados = []
+        nome_busca = nome_remetente.strip() 
+
+        for registro in self.dados:
+            if not isinstance(registro, dict): 
+                continue
+            nome_aluno = registro.get("nome_aluno")
+            conversas = registro.get("conversar", [])
+
+            for msg in conversas:
+                if not isinstance(msg, dict): 
+                    continue
+                remetente = msg.get("remetente", "")
+                destinatario = msg.get("destinatario", "")
+
+                if nome_busca == remetente or nome_busca == destinatario:
+                    msg_encontrada = dict(msg)
+                    msg_encontrada["aluno_contexto"] = nome_aluno
+                    resultados.append(msg_encontrada)
+        
+        return resultados
 
 def ver_funcao(nome_remetente):
     funcao = None
@@ -88,7 +118,7 @@ def filtra_professores():
 lista_responsavel = []
 def filtra_responsavel():
     global lista_responsavel
-    lista_responsavel.clear
+    lista_responsavel.clear()
     with open(dados_json, 'r', encoding='utf-8') as arquivo_json:
         lista = json.load(arquivo_json)
     for item in lista:
@@ -100,12 +130,28 @@ def filtra_responsavel():
         print(f"RESPONSAVEL -> {item['user']}")
 
 def iniciar_conversar(escolha_aluno, nome_remetente):
+
+    dados_carregados = []
+    if os.path.exists(historico_mensagens):
+        try:
+            with open(historico_mensagens, 'r', encoding='utf-8') as f:
+                dados_carregados = json.load(f)
+        except json.JSONDecodeError:
+            dados_carregados = []
+    gerenciador = GerenciadorMensagens(dados_carregados)
+
+    pessoa = gerenciador.buscar_por_pessoa(nome_remetente)
+    for item in pessoa:
+        print(f"Msg: {item['mensagem']} | De: {item['remetente']} Para: {item['destinatario']} -> data/hora: {item['data']}")
+    
+    print("\n")
     print(f"Pode mandar mensagem {nome_remetente}")
     funcao = ver_funcao(nome_remetente)
     
     
     if funcao == 'professor':
         while True:
+
             filtra_responsavel()
             destinatario = str(input("Com quem deseja conversar? "))
             mensagem = str(input("DIGITE A MENSAGEM -> "))
@@ -126,7 +172,3 @@ def iniciar_conversar(escolha_aluno, nome_remetente):
             continuar = int(input("continuar? 1-sim 2-não: "))
             if continuar != 1:
                 break
-
-nome_a = 'biazinha'
-nome_r = 'julia'
-iniciar_conversar(nome_a, nome_r)
